@@ -66,6 +66,9 @@ var GameStart = (id,mapname)=>{
 $$(()=>{
     getData();
     addItems();
+    $$("#logo").get(0).onclick = ()=>{
+        $$("#logo").get(0).style.color = "rgb("+ Math.floor(Math.random()*255) +","+ Math.floor(Math.random()*255) +","+ Math.floor(Math.random()*255) +")";
+    }
     $$("#map_list").get(0).onclick = (clickEvent)=>{
         if(clickEvent.srcElement.nodeName == "LI"){
             //点到了列表上

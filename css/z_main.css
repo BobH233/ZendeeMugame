@@ -35,6 +35,7 @@ body {
     margin-top: 30px;
     font-size:100px;
     color:rgb(16, 72, 255);
+    cursor: pointer;
 }
 .selectTitle{
     font-size:30px;
