@@ -10,6 +10,3 @@ $$(()=>{
         window.location.href = "./map_select.html";
     }
 })
-var goto = ()=>{
-    window.location.href = "./map_select.html";
-}

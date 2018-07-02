@@ -56,6 +56,10 @@ var addItems = ()=>{
         addItemToList(maps_list[i]);
     }
 }
+var PlayMusic = (musicName)=>{
+    $$("#audioPlayer").get(0).src = "music/" + musicName + ".mp3";
+    $$("#audioPlayer").get(0).play();
+}
 var GameStart = (id,mapname)=>{
 
 }
@@ -91,6 +95,7 @@ $$(()=>{
         }
         //console.log(selectItemID);
         $$("#title").get(0).innerHTML = selectItem;
+        PlayMusic(selectItem);
         $$("#title").get(0).style.color = "rgb(16, 72, 255)";
     };
     $$("#Start").get(0).onclick = ()=>{
