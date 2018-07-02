@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ZendeeMugame Alpha1.0</title>
+        <link rel="stylesheet" href="css/mdui.min.css">
+        <link rel="stylesheet" href="css/z_main.css">
+        <script src="js/mdui.min.js"></script>
+        <script src="js/z_main.js"></script>
+        <script>
+            document.ondragstart = function(event) {
+                return false;
+            };
+            document.onselectstart="return false;"
+            document.onselect="document.selection.empty();"
+            document.oncopy="return false;"
+        </script>
+    </head>
+    <body>
+        <div class="mdui-container-fluid">
+            <div class="mdui-col-xs-8 mdui-col-offset-md-2 centerBlock">
+                <img src="img/logo.jpg" class="mdui-center logo"></img>
+                <div style="text-align: center;margin-top: 10px;">
+                    <span class="gameTitle">Zendee</span>
+                    <span class="gameTitle" style="color:darkorange" id="title2">Mu</span>
+                    <span class="gameTitle" style="color:deeppink" id="title3">game</span>
+                </div>
+                <div class="mdui-typo" style="margin-top: 20px">
+                    <hr/>
+                </div>
+                <div class="mdui-row" style="margin-top:30px;">
+                    <div class="mdui-col-xs-6 mdui-col-offset-md-3">
+                        <button id="GameStart" onclick="goto();" class="mdui-btn mdui-btn-block mdui-color-blue mdui-ripple mdui-btn-raised" style="font-size: 18px;color: rgb(236, 236, 236)!important">开始游戏</button>
+                    </div>
+                </div>
+                <div class="mdui-row" style="margin-top:30px;">
+                    <div class="mdui-col-xs-6 mdui-col-offset-md-3">
+                        <button id="CreateSpace" class="mdui-btn mdui-btn-block mdui-color-pink-200 mdui-ripple mdui-btn-raised" style="font-size: 18px;color: rgb(236, 236, 236)!important">创意工坊</button>
+                    </div>
+                </div>
+                <div class="mdui-row" style="margin-top:30px;">
+                    <div class="mdui-col-xs-6 mdui-col-offset-md-3">
+                        <button id="About" class="mdui-btn mdui-btn-block mdui-color-orange-700 mdui-ripple mdui-btn-raised" style="font-size: 18px;color: rgb(236, 236, 236)!important">关于游戏</button>
+                    </div>
+                </div>
+                <div class="copyright mdui-center">Copyright ©Zendee 2018</div>
+            </div>
+        </div>
+    </body>
+</html>

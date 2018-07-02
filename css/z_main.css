@@ -1,0 +1,43 @@
+body {
+    font-family: Microsoft Yahei;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.centerBlock{
+    background-color: #d5e7f3;
+    height: 100%;
+    box-shadow: 1px 1px 28px #88887C;
+}
+.logo{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+.gameTitle{
+    font-size:40px;
+    text-align:center;
+    margin-top: 10px;
+    margin: -2px;
+}
+.copyright{
+    position:absolute;
+    left:0;
+    bottom:10px;
+    text-align: center;
+    width: 100%;
+}
+.icon_huge{
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    font-size:100px;
+    color:rgb(16, 72, 255);
+}
+.selectTitle{
+    font-size:30px;
+    text-align:center;
+    margin-top: 5px;
+}

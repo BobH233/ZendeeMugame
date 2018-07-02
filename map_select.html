@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>地图选择</title>
+        <link rel="stylesheet" href="css/mdui.min.css">
+        <link rel="stylesheet" href="css/z_main.css">
+        <script src="js/mdui.min.js"></script>
+        <script src="js/map_select.js"></script>
+        <script>
+            document.ondragstart = function(event) {
+                return false;
+            };
+            document.onselectstart="return false;"
+            document.onselect="document.selection.empty();"
+            document.oncopy="return false;"
+        </script>
+    </head>
+    <body>
+        <div class="mdui-container-fluid">
+            <div class="mdui-col-xs-8 mdui-col-offset-md-2 centerBlock">
+                <i class="mdui-icon material-icons icon_huge mdui-center">cloud_queue</i>
+                <div style="text-align: center;margin-top: 10px;">
+                        <span id="title" class="selectTitle">选择一张你喜欢的地图</span>
+                </div>
+                <div class="mdui-typo" style="margin-top: 20px">
+                        <hr/>
+                </div>
+                <div class="mdui-row" style="margin-top:10px;">
+                    <div class="mdui-col-xs-6 mdui-col-offset-md-3">
+                        <ul id="map_list" class="mdui-list" style="max-height: 300px;overflow: scroll;border:1px solid rgba(192, 192, 192, 0.26);">
+                            
+                        </ul>
+                        <div class="mdui-row" style="margin-top:30px;">
+                                <div class="mdui-col-xs-6 mdui-col-offset-md-3">
+                                    <button id="Start" class="mdui-btn mdui-btn-block mdui-color-blue mdui-ripple mdui-btn-raised" style="font-size: 18px;color: rgb(236, 236, 236)!important">开始游戏</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
