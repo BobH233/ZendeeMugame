@@ -2,7 +2,7 @@ var $$ = mdui.JQ;
 var selectItem = "";
 var selectItemID = -1;
 var itemIDmax = 0;
-var maps_list = ["夢路らびりんす","風の源","本当のお母さん","出航のマーチ","Say Something","Wolves","Fade","Bad Apple!"];
+var maps_list = ["夢路らびりんす","風の源","本当のお母さん","出航のマーチ","Say something","Wolves","Fade","Bad Apple!"];
 function hasClass( elements,cName ){
     return !!elements.className.match( new RegExp( "(\\s|^)" + cName + "(\\s|$)") ); // ( \\s|^ ) 判断前面是否有空格 （\\s | $ ）判断后面是否有空格 两个感叹号为转换为布尔值 以方便做判断
 }
