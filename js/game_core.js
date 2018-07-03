@@ -74,6 +74,11 @@ $$(()=>{
         mdui.alert('这只是一个界面优先预览版，还没有写出游戏实际功能', '预览版提示');
     },1000);
 });
+$$(()=>{
+    setTimeout(()=>{
+        PlayMusic('夢路らびりんす');
+    },3000);
+});
 var canvasInit = ()=>{
     var canvasWidth = $$("#gameCenter").get(0).offsetWidth;
     var canvasHeight = $$("#gameCenter").get(0).offsetHeight;
