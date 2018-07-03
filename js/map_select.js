@@ -64,7 +64,7 @@ var PlayMusic = (musicName)=>{
     //while($$("#audioPlayer").get(0).readyState != 4);
 }
 var GameStart = (id,mapname)=>{
-
+    window.location.href = "./play.html";
 }
 var showLoadingMusic= ()=>{
     inst.open();

@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ZendeeMugame Alpha1.0</title>
+        <link rel="stylesheet" href="css/mdui.min.css">
+        <link rel="stylesheet" href="css/game.css">
+        <script src="js/mdui.min.js"></script>
+        <script src="js/game_core.js"></script>
+        <script>
+            document.ondragstart = function(event) {
+                return false;
+            };
+            document.onselectstart="return false;"
+            document.onselect="document.selection.empty();"
+            document.oncopy="return false;"
+        </script>
+    </head>
+    <body>
+        <audio id="audioPlayer" src="" controls="controls" loop="false" hidden="true"></audio>
+        <div class="mdui-container-fluid">
+            <div class="mdui-col-xs-10 mdui-col-offset-md-1 centerBlock">
+                <div id="GameSpace" class="mdui-col-xs-8 gamespace">
+                    <canvas id="gameCenter" class="gameCanvas"></canvas>
+                </div>
+                <div id="MenuSpace" class="mdui-col-xs-4 menuspace">
+                    <div id="HeadBlock">
+                        <div id="mapname">夢路らびりんす</div>
+                        <div class="mdui-progress">
+                                <div id="progress" class="mdui-progress-determinate" style="width: 0%;"></div>
+                        </div>
+                    </div>
+                    <ul class="mdui-list" style="background-color: rgb(235, 255, 120);padding: 0px;">
+                        <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">时长:</span>2'35''</li>
+                        <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">原作者:</span>原田彩楓</li>
+                        <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">地图作者:</span>BobH</li>
+                        <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">难度:</span>一般</li>
+                    </ul>
+                    <div id="scoreBlock">
+                        <div class="scoreTitle">你的得分</div>
+                        <div id="scoreShow" style="color: rebeccapurple">666</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

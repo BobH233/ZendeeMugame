@@ -1,0 +1,40 @@
+.centerBlock{
+    background-color: #ff90ff;
+    height: 100%;
+    box-shadow: 1px 1px 28px #88887C;
+    padding:0px;
+}
+.gamespace{
+    background-color: #f7f7f7;
+    height: 100%;
+    padding: 0px;
+}
+.menuspace{
+    background-color: hsl(219, 100%, 78%);
+    height: 100%;
+    padding: 0px;
+}
+.gameCanvas{
+    height:100%;
+    width: 100%;
+}
+#HeadBlock{
+    width: 100%;
+    height: 100px;
+    background-color: #ffdd6b;
+}
+#mapname{
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+}
+.scoreTitle{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+}
+#scoreShow{
+    font-size: 80px;
+    text-align: center;
+    margin-top: 20px;
+}
