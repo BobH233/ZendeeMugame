@@ -61,10 +61,6 @@ var PlayMusic = (musicName)=>{
     //while($$("#audioPlayer").get(0).readyState != 4);
 }
 
-var testTip = ()=>{
-    mdui.alert('这只是一个界面优先预览版，还没有写出游戏实际功能', '预览版提示');
-}
-
 $$(()=>{
     audio_obj = $$("#audioPlayer").get(0)
     var c = $$("#gameCenter").get(0);
@@ -72,10 +68,12 @@ $$(()=>{
     $$("#gameCenter").get(0).width = $$("#GameSpace").get(0).offsetWidth
     $$("#gameCenter").get(0).height = $$("#GameSpace").get(0).offsetHeight
     canvasInit();
-})
+});
 $$(()=>{
-    testTip();
-})
+    setTimeout(()=>{
+        mdui.alert('这只是一个界面优先预览版，还没有写出游戏实际功能', '预览版提示');
+    },100);
+});
 var canvasInit = ()=>{
     var canvasWidth = $$("#gameCenter").get(0).offsetWidth;
     var canvasHeight = $$("#gameCenter").get(0).offsetHeight;
