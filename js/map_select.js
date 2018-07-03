@@ -2,6 +2,7 @@ var $$ = mdui.JQ;
 var selectItem = "";
 var selectItemID = -1;
 var itemIDmax = 0;
+var inst;
 var maps_list = ["夢路らびりんす","風の源","本当のお母さん","出航のマーチ","Say something","Wolves","Fade","Bad Apple!"];
 function hasClass( elements,cName ){
     return !!elements.className.match( new RegExp( "(\\s|^)" + cName + "(\\s|$)") ); // ( \\s|^ ) 判断前面是否有空格 （\\s | $ ）判断后面是否有空格 两个感叹号为转换为布尔值 以方便做判断
@@ -57,13 +58,27 @@ var addItems = ()=>{
     }
 }
 var PlayMusic = (musicName)=>{
+    showLoadingMusic();
     $$("#audioPlayer").get(0).src = "music/" + musicName + ".mp3";
     $$("#audioPlayer").get(0).play();
+    //while($$("#audioPlayer").get(0).readyState != 4);
 }
 var GameStart = (id,mapname)=>{
 
 }
+var showLoadingMusic= ()=>{
+    inst.open();
+}
+var FinishLodingMusic = ()=>{
+    inst.close();
+}
 $$(()=>{
+    inst = new mdui.Dialog('#waiting-dialog',{'modal':'true'});
+    $$("#audioPlayer").get(0).addEventListener("canplaythrough",
+    function() {
+    　　FinishLodingMusic();
+    },
+    false);
     getData();
     addItems();
     $$("#logo").get(0).onclick = ()=>{

@@ -17,7 +17,14 @@
     </head>
     <body>
         <audio id="audioPlayer" src="" controls="controls" loop="false" hidden="true"></audio>
+        
         <div class="mdui-container-fluid">
+            <div class="mdui-dialog" id="waiting-dialog">
+                <div class="mdui-progress">
+                        <div class="mdui-progress-indeterminate"></div>
+                </div>
+                <div style="margin-top: 10px;margin-bottom: 10px;font-size: 20px;text-align: center">正在加载音乐...</div>
+            </div>
             <div class="mdui-col-xs-8 mdui-col-offset-md-2 centerBlock">
                 <i id="logo" class="mdui-icon material-icons icon_huge mdui-center">cloud_queue</i>
                 <div style="text-align: center;margin-top: 10px;">
