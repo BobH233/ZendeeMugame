@@ -16,6 +16,7 @@ var int=self.setInterval("onRender()",1000/60); //60fps
 var int2=self.setInterval("updateProgress()",500); 
 //音乐
 var audio_obj;
+var audio_effect;
 var setProgress = (precent)=>{
     $$("#progress").get(0).style = "width:" + precent + "%";
 }
@@ -97,6 +98,9 @@ var changePage = (page)=>{
 }
 $$(()=>{
     audio_obj = $$("#audioPlayer").get(0)
+    audio_effect = $$("#audioEffect").get(0)
+    audio_obj.volume = 0.5;
+    audio_effect.volume = 1;
     var c = $$("#gameCenter").get(0);
     canvasContext = c.getContext("2d");
     $$("#gameCenter").get(0).width = $$("#GameSpace").get(0).offsetWidth
@@ -120,10 +124,13 @@ $$(()=>{
     setTimeout(()=>{
         //mdui.alert('这只是一个界面优先预览版，还没有写出游戏实际功能', '预览版提示');
     },1000);
+    $$("#start").get(0).onclick = ()=>{
+        PlayMusic('Bad Apple!');
+    }
 });
 $$(()=>{
     setTimeout(()=>{
-        PlayMusic('夢路らびりんす');
+        //PlayMusic('夢路らびりんす');
     },3000);
 });
 var canvasInit = ()=>{
@@ -148,22 +155,34 @@ var canvasInit = ()=>{
     canvasContext.fillRect(pos2,canvasHeight-insHeight,pos1,insHeight);
     canvasContext.stroke();
 }
+var onKeyPress = (keynum)=>{
+    audio_effect.currentTime = 0;
+    audio_effect.play();
+    //console.log('asf');
+}
+
 document.onkeydown = function(e) {
     //Numpad%%
     if(e.code == "Numpad1"){
+        onKeyPress(1);
         is_key1_down = true;
     }else if(e.code == "Numpad2"){
+        onKeyPress(1);
         is_key2_down = true;
     }else if(e.code == "Numpad3"){
+        onKeyPress(1);
         is_key3_down = true;
     }
 }
 document.onkeyup = function(e) {
     if(e.code == "Numpad1"){
         is_key1_down = false;
+        //audio_effect.pause();
     }else if(e.code == "Numpad2"){
         is_key2_down = false;
+        //audio_effect.pause();
     }else if(e.code == "Numpad3"){
         is_key3_down = false;
+        //audio_effect.pause();
     }
 }

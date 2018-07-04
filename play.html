@@ -18,6 +18,7 @@
     </head>
     <body>
         <audio id="audioPlayer" src="" controls="controls" loop="false" hidden="true"></audio>
+        <audio id="audioEffect" src="music/next.mp3" controls="controls" hidden="true"></audio>
         <div class="mdui-container-fluid">
             <div class="mdui-col-xs-10 mdui-col-offset-md-1 centerBlock">
                 <div id="GameSpace" class="mdui-col-xs-8 gamespace">
@@ -53,7 +54,7 @@
                             <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">地图作者:</span><span id="mapMaker" style="margin-left: 10px">BobH</span></li>
                             <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">难度:</span><span id="hardProcess" style="margin-left: 10px">一般</span></li>
                         </ul>
-                        <button class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple mdui-color-blue-600">开始游戏</button>
+                        <button id="start" class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple mdui-color-blue-600">开始游戏</button>
                     </div>
                     <div id="page2" class="menuspace" style="display:none">
                         <div id="scoreBlock">
