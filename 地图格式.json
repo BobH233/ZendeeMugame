@@ -1,0 +1,27 @@
+{
+    "map_info": {
+        "songname": "Bad Apple", 
+        "originCreater": "ZUN", 
+        "mapcreater": "BobH", 
+        "mapLength": "1'36'", 
+        "difficuty": "简单", 
+        "blockCnt": 2
+    }, 
+    "map_blocks": [
+        {
+            "type": 1, 
+            "timeStart": 1.056, 
+            "timeEnd": 2.536, 
+            "lastTime": 1.48, 
+            "insType": 0
+        }, 
+        {
+            "type": 1, 
+            "timeStart": 3.14, 
+            "timeEnd": 4.14, 
+            "lastTime": 1, 
+            "insType": 0
+        }
+    ], 
+    "music_url": "music/Bad Apple!.mp3"
+}
