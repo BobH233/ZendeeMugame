@@ -24,22 +24,70 @@
                     <canvas id="gameCenter" class="gameCanvas"></canvas>
                 </div>
                 <div id="MenuSpace" class="mdui-col-xs-4 menuspace">
-                    <div id="HeadBlock">
-                        <div id="mapname">夢路らびりんす</div>
-                        <div class="mdui-progress">
+                    <div class="mdui-bottom-nav" style="position: absolute;bottom: 0px;width: 100%">
+                        <a id="bar1" class="mdui-ripple mdui-bottom-nav-active">
+                            <i class="mdui-icon material-icons">info_outline</i>
+                            <label>歌曲信息</label>
+                        </a>
+                        <a id="bar2" class="mdui-ripple">
+                            <i class="mdui-icon material-icons">games</i>
+                            <label>游戏进度</label>
+                        </a>
+                        <a id="bar3" class="mdui-ripple">
+                            <i class="mdui-icon material-icons">report_problem</i>
+                            <label>问题反馈</label>
+                        </a>
+                        <a id="bar4" class="mdui-ripple">
+                            <i class="mdui-icon material-icons">bug_report</i>
+                            <label>Debug</label>
+                        </a>
+                    </div>
+                    <div id="page1" class="menuspace">
+                        <div id="HeadBlock">
+                            <div id="mapname">夢路らびりんす</div>
+                        </div>
+                        <ul class="mdui-list" style="background-color: rgb(235, 255, 120);padding: 0px;">
+                            <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">时长:</span><span id="musicLength" style="margin-left: 10px">2'35''</span></li>
+                            <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">音符数:</span><span id="BlockCnt" style="margin-left: 10px">2003</span></li>
+                            <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">原作者:</span><span id="originWriter" style="margin-left: 10px">原田彩楓</span></li>
+                            <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">地图作者:</span><span id="mapMaker" style="margin-left: 10px">BobH</span></li>
+                            <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">难度:</span><span id="hardProcess" style="margin-left: 10px">一般</span></li>
+                        </ul>
+                        <button class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple mdui-color-blue-600">开始游戏</button>
+                    </div>
+                    <div id="page2" class="menuspace" style="display:none">
+                        <div id="scoreBlock">
+                            <div class="mdui-progress">
                                 <div id="progress" class="mdui-progress-determinate" style="width: 0%;"></div>
+                            </div>
+                            <div class="scoreTitle">你的得分</div>
+                            <div id="scoreShow" style="color: rebeccapurple">666</div>
+                        </div>
+                        <ul class="mdui-list" style="padding: 0px;margin-top: 20px;">
+                            <li id="perfactBlock" class="mdui-list-item">
+                                <i class="mdui-icon material-icons" style="color: rgb(81, 255, 13);margin-right: 10px;">brightness_1</i>
+                                <span style="font-weight: bold;font-size: 16px">Perfact:</span>
+                            </li>
+                            <li id="poorBlock" class="mdui-list-item">
+                                <i class="mdui-icon material-icons" style="color: rgb(255, 138, 42);margin-right: 10px;">brightness_1</i>
+                                <span style="font-weight: bold;font-size: 16px">Poor:</span>
+                            </li>
+                            <li id="missBlock" class="mdui-list-item">
+                                <i class="mdui-icon material-icons" style="color: rgb(255, 0, 0);margin-right: 10px;">brightness_1</i>
+                                <span style="font-weight: bold;font-size: 16px">Miss:</span>    
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="page3" class="menuspace" style="display:none">
+                        <div id="scoreBlock" style="padding: 20px;">
+                            <div class="scoreTitle" style="margin-bottom: 20px;">请尽管提问题给我，反正我也不会改</div>
+                            <img src="img/poi.jpg" style="width: 100%;"></img>
                         </div>
                     </div>
-                    <ul class="mdui-list" style="background-color: rgb(235, 255, 120);padding: 0px;">
-                        <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">时长:</span>2'35''</li>
-                        <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">音符数:</span>2003</li>
-                        <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">原作者:</span>原田彩楓</li>
-                        <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">地图作者:</span>BobH</li>
-                        <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">难度:</span>一般</li>
-                    </ul>
-                    <div id="scoreBlock">
-                        <div class="scoreTitle">你的得分</div>
-                        <div id="scoreShow" style="color: rebeccapurple">666</div>
+                    <div id="page4" class="menuspace" style="display:none">
+                        <div id="scoreBlock" style="padding: 20px;">
+                            <div class="scoreTitle" style="margin-bottom: 20px;">兄弟，写BUG啊</div>
+                        </div>
                     </div>
                 </div>
             </div>

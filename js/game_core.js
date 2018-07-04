@@ -1,13 +1,20 @@
 var $$ = mdui.JQ;
 var map_load;  //储存地图数据
 var server_data;
+//游戏变量
+var user_score_tot = 0;
+var user_score_prefect = 0; //perfact块数
+var user_score_pool = 0; //pool块数
+var user_score_miss = 0; //miss块数
 //状态变量
 var is_key1_down = false;
 var is_key2_down = false;
 var is_key3_down = false;
+//绘制信息
 var canvasContext;
 var int=self.setInterval("onRender()",1000/60); //60fps
 var int2=self.setInterval("updateProgress()",500); 
+//音乐
 var audio_obj;
 var setProgress = (precent)=>{
     $$("#progress").get(0).style = "width:" + precent + "%";
@@ -61,6 +68,33 @@ var PlayMusic = (musicName)=>{
     //while($$("#audioPlayer").get(0).readyState != 4);
 }
 
+var changePage = (page)=>{
+    var b1 = $$("#page1").get(0).style;
+    var b2 = $$("#page2").get(0).style;
+    var b3 = $$("#page3").get(0).style;
+    var b4 = $$("#page4").get(0).style;
+    if(page == 1){
+        b1.display = "unset";
+        b2.display = "none";
+        b3.display = "none";
+        b4.display = "none";
+    }else if(page == 2){
+        b1.display = "none";
+        b2.display = "unset";
+        b3.display = "none";
+        b4.display = "none";
+    }else if(page == 3){
+        b1.display = "none";
+        b2.display = "none";
+        b3.display = "unset";
+        b4.display = "none";
+    }else if(page == 4){
+        b1.display = "none";
+        b2.display = "none";
+        b3.display = "none";
+        b4.display = "unset";
+    }
+}
 $$(()=>{
     audio_obj = $$("#audioPlayer").get(0)
     var c = $$("#gameCenter").get(0);
@@ -68,10 +102,23 @@ $$(()=>{
     $$("#gameCenter").get(0).width = $$("#GameSpace").get(0).offsetWidth
     $$("#gameCenter").get(0).height = $$("#GameSpace").get(0).offsetHeight
     canvasInit();
+    //绑定bar事件
+    $$("#bar1").get(0).onclick = ()=>{
+        changePage(1);
+    }
+    $$("#bar2").get(0).onclick = ()=>{
+        changePage(2);
+    }
+    $$("#bar3").get(0).onclick = ()=>{
+        changePage(3);
+    }
+    $$("#bar4").get(0).onclick = ()=>{
+        changePage(4);
+    }
 });
 $$(()=>{
     setTimeout(()=>{
-        mdui.alert('这只是一个界面优先预览版，还没有写出游戏实际功能', '预览版提示');
+        //mdui.alert('这只是一个界面优先预览版，还没有写出游戏实际功能', '预览版提示');
     },1000);
 });
 $$(()=>{
