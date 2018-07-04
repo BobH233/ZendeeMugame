@@ -21,7 +21,9 @@ function ZM_map_block(type,timeS,timeE,lastTime){
 //JSON.stringify(object)
 function ZM_map(url){
     this.map_info = new ZM_map_info();
-    this.map_blocks = new Array();
+    this.map_blocks_line1 = new Array();
+    this.map_blocks_line2 = new Array();
+    this.map_blocks_line3 = new Array();
     this.music_url = url;
     //console.log(JSON.stringify(this.map_info));
 }
@@ -38,8 +40,8 @@ var example = ()=>{
     exam_map.map_info.mapLength = "1'36'"
     exam_map.map_info.originCreater = "ZUN"
     exam_map.map_info.songname = "Bad Apple"
-    exam_map.map_blocks.push(new ZM_map_block(1,1.056,2.536,1.48));
-    exam_map.map_blocks.push(new ZM_map_block(1,3.14,4.14,1));
+    exam_map.map_blocks_line1.push(new ZM_map_block(1,1056,2536,1480));
+    exam_map.map_blocks_line2.push(new ZM_map_block(1,3140,4140,1000));
     console.log(exam_map)
     console.log(JSON.stringify(exam_map));
 }

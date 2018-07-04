@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ZendeeMugame Alpha1.0</title>
+        <link rel="stylesheet" href="css/mdui.min.css">
+        <link rel="stylesheet" href="css/game.css">
+        
+        <script src="js/mdui.min.js"></script>
+        <script src="js/map_solver.js"></script>
+        <script src="js/map_make_core.js"></script>
+        <script>
+            document.ondragstart = function(event) {
+                return false;
+            };
+            document.onselectstart="return false;"
+            document.onselect="document.selection.empty();"
+            document.oncopy="return false;"
+        </script>
+    </head>
+    <body>
+        <audio id="audioPlayer" src="" controls="controls" hidden="true"></audio>
+        <audio id="audioEffect" src="music/next.mp3" controls="controls" hidden="true"></audio>
+        <div class="mdui-container-fluid">
+            <div class="mdui-col-xs-10 mdui-col-offset-md-1 centerBlock">
+                <div id="GameSpace" class="mdui-col-xs-8 gamespace">
+                    <canvas id="gameCenter" class="gameCanvas"></canvas>
+                </div>
+                <div id="MenuSpace" class="mdui-col-xs-4 menuspace">
+                    <div class="mdui-bottom-nav" style="position: absolute;bottom: 0px;width: 100%">
+                        <a id="bar1" class="mdui-ripple mdui-bottom-nav-active">
+                            <i class="mdui-icon material-icons">info_outline</i>
+                            <label>歌曲信息</label>
+                        </a>
+                        <a id="bar2" class="mdui-ripple">
+                            <i class="mdui-icon material-icons">games</i>
+                            <label>游戏进度</label>
+                        </a>
+                        <a id="bar3" class="mdui-ripple">
+                            <i class="mdui-icon material-icons">report_problem</i>
+                            <label>问题反馈</label>
+                        </a>
+                        <a id="bar4" class="mdui-ripple">
+                            <i class="mdui-icon material-icons">bug_report</i>
+                            <label>Debug</label>
+                        </a>
+                    </div>
+                    <div id="page1" class="menuspace">
+                        <div id="HeadBlock">
+                            <div id="mapname">地图制作器测试</div>
+                        </div>
+                        <ul class="mdui-list" style="background-color: rgb(235, 255, 120);padding: 0px;">
+                            <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">测试:</span><span id="musicLength" style="margin-left: 10px">测试</span></li>
+                            <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">测试:</span><span id="BlockCnt" style="margin-left: 10px">测试</span></li>
+                            <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">测试:</span><span id="originWriter" style="margin-left: 10px">测试</span></li>
+                            <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">测试:</span><span id="mapMaker" style="margin-left: 10px">测试</span></li>
+                            <li class="mdui-list-item"><span style="font-weight: bold;font-size: 16px">测试:</span><span id="hardProcess" style="margin-left: 10px">测试</span></li>
+                        </ul>
+                        <button id="start" class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple mdui-color-blue-600">开始录制</button>
+                    </div>
+                    <div id="page2" class="menuspace" style="display:none">
+                        <div id="scoreBlock">
+                            <div class="mdui-progress">
+                                <div id="progress" class="mdui-progress-determinate" style="width: 0%;"></div>
+                            </div>
+                            <div class="scoreTitle">地图制作测试</div>
+                            <div id="scoreShow" style="color: rebeccapurple">null</div>
+                        </div>
+                        <ul class="mdui-list" style="padding: 0px;margin-top: 20px;">
+                            <li id="perfactBlock" class="mdui-list-item">
+                                <i class="mdui-icon material-icons" style="color: rgb(81, 255, 13);margin-right: 10px;">brightness_1</i>
+                                <span style="font-weight: bold;font-size: 16px">Perfact:</span>
+                            </li>
+                            <li id="poorBlock" class="mdui-list-item">
+                                <i class="mdui-icon material-icons" style="color: rgb(255, 138, 42);margin-right: 10px;">brightness_1</i>
+                                <span style="font-weight: bold;font-size: 16px">Poor:</span>
+                            </li>
+                            <li id="missBlock" class="mdui-list-item">
+                                <i class="mdui-icon material-icons" style="color: rgb(255, 0, 0);margin-right: 10px;">brightness_1</i>
+                                <span style="font-weight: bold;font-size: 16px">Miss:</span>    
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="page3" class="menuspace" style="display:none">
+                        <div id="scoreBlock" style="padding: 20px;">
+                            <div class="scoreTitle" style="margin-bottom: 20px;">请尽管提问题给我，反正我也不会改</div>
+                            <img src="img/poi.jpg" style="width: 100%;"></img>
+                        </div>
+                    </div>
+                    <div id="page4" class="menuspace" style="display:none">
+                        <div id="scoreBlock" style="">
+                            <ul class="mdui-list" style="background-color: rgb(251, 255, 231);padding: 0px;">
+                                <li class="mdui-list-item">倒计时:<span id="countdown">3000</span>ms</li>
+                                <li class="mdui-list-item">时间轴:<span id="timeline">0</span>ms</li>
+                                <li class="mdui-list-item">块数:<span id="_BlockCnt">0</span>块</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
